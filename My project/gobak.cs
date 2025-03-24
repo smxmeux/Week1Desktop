@@ -297,3 +297,64 @@ public class Goblin : Entity
         Debug.Log("고블린이 회복!");
     }
 }
+public class Parent
+{
+    public void Method01()
+    {
+        Debug.Log("Parent");
+    }
+}
+public class Child : Parent
+{
+    public new void Method01()
+    {
+        Debug.Log("Child");
+    }
+}
+public class CameController : MonoBehaviour
+{
+    private void Awake()
+    {
+        Parent p = new Parent();
+        p.Method01();
+
+        Child c = new Child();
+        c.Method01();
+
+        Parent pc = new Child();
+        pc.Method01();
+    }
+}
+#static
+public class Enemy
+{
+    public int numeric;
+    public static string specise;
+}
+public class GameController
+{
+    private void Awak()
+    {
+        Enemy enemy01 = new Enemy();
+        enemy01.numeric = 0;
+        Enemy enemy02 = new Enemy();
+        enemy02.numeric = 1;
+
+        Debug.Log(enemy01.numeric);
+        Debug.Log(enemy02.numeric);
+
+        Enemy.specise = "고블린"
+        Debug.Log(Enemy.specise);
+    }
+}
+using MySpace;
+
+public class GameController
+{
+    private void Awake()
+    {
+        Player player01;
+        YourSpace.Player player02;
+    }
+}
+                  
